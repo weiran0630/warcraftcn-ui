@@ -36,7 +36,7 @@ export default function DefaultSearchDialog(props: SharedProps) {
       {...props}
     >
       <SearchDialogOverlay />
-      <SearchDialogContent className="fixed top-20 left-1/2 -translate-x-1/2 rounded-none bg-background md:top-[15%]">
+      <SearchDialogContent className="fixed top-20 left-1/2 -translate-x-1/2 bg-background md:top-[15%]">
         <SearchDialogHeader>
           <svg
             aria-label="search text-muted-foreground"

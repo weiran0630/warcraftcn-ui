@@ -14,7 +14,7 @@ const inter = Inter({
 export default function Layout({ children }: LayoutProps<"/">) {
   return (
     <html className={inter.className} lang="en" suppressHydrationWarning>
-      <body className="flex min-h-screen flex-col">
+      <body className="flex min-h-screen flex-col overflow-x-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -27,7 +27,10 @@ export default function Layout({ children }: LayoutProps<"/">) {
             }}
           >
             <SiteHeader />
-            <main className="flex-1">{children}</main>
+
+            <div className="mx-auto w-full max-w-[1400px] flex-1 border-r border-l">
+              {children}
+            </div>
             <Toaster />
           </RootProvider>
         </ThemeProvider>

@@ -1,9 +1,7 @@
 "use client";
 
-import { Menu } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-
 import { navItems } from "@/config/nav-items";
 
 import { Button } from "./ui/button";
@@ -15,33 +13,47 @@ import {
   DrawerTrigger,
 } from "./ui/drawer";
 
-export function MobileNav() {
+export default function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
     <Drawer onOpenChange={setOpen} open={open}>
       <DrawerTrigger asChild>
-        <Button className="md:hidden" size="icon" variant="ghost">
-          <Menu className="h-5 w-5" />
-          <span className="sr-only">Toggle menu</span>
+        <Button size="icon" variant="ghost">
+          ☰
         </Button>
       </DrawerTrigger>
-      <DrawerContent>
-        <DrawerHeader>
-          <DrawerTitle>Navigation</DrawerTitle>
-        </DrawerHeader>
-        <nav className="flex flex-col gap-4 p-4">
-          {navItems.header.map((item) => (
-            <Link
-              className="font-medium text-lg transition-colors hover:text-foreground/80"
-              href={item.href}
-              key={item.href}
-              onClick={() => setOpen(false)}
-            >
-              {item.label}
-            </Link>
+      <DrawerContent className="h-3/4">
+        <DrawerHeader className="overflow-y-auto">
+          <div className="flex flex-col gap-2">
+            {navItems.header.map((item) => (
+              <Link
+                className="font-extralight text-2xl"
+                href={item.href}
+                key={item.href}
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          {navItems.navMain.map((navItem) => (
+            <div className="flex flex-col gap-2 py-10" key={navItem.title}>
+              <DrawerTitle className="text-xl">{navItem.title}</DrawerTitle>
+              {navItem.items.map((item) => (
+                <Link
+                  className="flex items-center gap-5 font-extralight text-muted-foreground text-xl"
+                  href={item.url}
+                  key={item.title}
+                  onClick={() => setOpen(false)}
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
           ))}
-        </nav>
+        </DrawerHeader>
       </DrawerContent>
     </Drawer>
   );
