@@ -1,45 +1,51 @@
-# warcraftcn-ui
+## warcraftcn/ui
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+Warcraft-themed UI components for your Next.js applications. Free. Open Source.
 
-Run development server:
+Visit [warcraftcn.com](https://warcraftcn.com/)
+
+[![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=❤&logo=GitHub&color=#fe8e86)](https://github.com/sponsors/theorcdev)
+
+![warcraftcn UI Components](./public/assets/warcraftcn-readme-showcase.png)
+
+## Contributing
+
+Please read the [contributing guide](/contributing.md).
+
+### Usage Example
+
+To add the `button` component to your project, run the following command:
 
 ```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
+pnpm dlx shadcn@latest add @warcraftcn/button
 ```
 
-Open http://localhost:3000 with your browser to see the result.
+Once installed, you can import and use the component in your files:
 
-## Explore
+```typescript
+import { Button } from "@/components/ui/warcraftcn";
 
-In the project, you can see:
+export default function App() {
+  return <Button>Click me</Button>;
+}
+```
 
-- `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
-- `lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
+**Note:** The import path `@/components/ui/warcraftcn` assumes your project has a path alias configured (common in Next.js and similar frameworks). Adjust the path to match your project's structure if needed.
 
-| Route                     | Description                                            |
-| ------------------------- | ------------------------------------------------------ |
-| `app/(home)`              | The route group for your landing page and other pages. |
-| `app/docs`                | The documentation layout and pages.                    |
-| `app/api/search/route.ts` | The Route Handler for search.                          |
+<p align="center">
+  <img src="./public/images/readme/warcraftcn-button-example.png" alt="warcraftcn Button example" />
+</p>
 
-### Fumadocs MDX
+## License
 
-A `source.config.ts` config file has been included, you can customise different options like frontmatter schema.
+Licensed under the [MIT license](/license.md).
 
-Read the [Introduction](https://fumadocs.dev/docs/mdx) for further details.
+## Open Source Program
 
-## Learn More
+<a href="https://vercel.com/oss">
+  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
+</a>
 
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
+## Star History
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.dev) - learn about Fumadocs
+[![Star History](https://starchart.cc/theorcdev/warcraftcn-ui.svg?variant=adaptive&line=%237fce00)](https://starchart.cc/theorcdev/warcraftcn-ui)
