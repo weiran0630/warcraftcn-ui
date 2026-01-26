@@ -1,3 +1,8 @@
+interface NavMainItem {
+  title: string;
+  items: { title: string; url: string }[];
+}
+
 export const navItems = {
   header: [
     {
@@ -9,7 +14,7 @@ export const navItems = {
       href: "/docs/components",
     },
   ],
-  navMain: [],
+  navMain: [] as NavMainItem[],
 };
 
 export const TOP_LEVEL_SECTIONS = [{ name: "Get Started", href: "/docs" }];
