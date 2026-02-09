@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fragment_Gallery">
+
+    <fragment
+        android:id="@+id/fragment_Gallery"
+        android:name="tw.edu.mcu.weiranzhu.memegenerator.Fragment_Gallery"
+        android:label="fragment__gallery"
+        tools:layout="@layout/fragment__gallery" />
+    <fragment
+        android:id="@+id/fragment_Favourite"
+        android:name="tw.edu.mcu.weiranzhu.memegenerator.Fragment_Favourite"
+        android:label="fragment__favourite"
+        tools:layout="@layout/fragment__favourite" />
+</navigation>

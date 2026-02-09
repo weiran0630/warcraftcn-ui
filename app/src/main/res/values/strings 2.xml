@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Meme Generator</string>
+    <string name="title_activity_meme_create">Meme Create</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+</resources>

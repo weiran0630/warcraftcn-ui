@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MemeCreate">
+
+    <LinearLayout
+        android:id="@+id/top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/topEdit"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:hint="top text" />
+
+        <EditText
+            android:id="@+id/bottomEdit"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:hint="bottom text" />
+
+        <Button
+            android:id="@+id/create"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Create" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/botttom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Save" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/botttom_lay"
+        android:layout_below="@id/top_lay"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <tw.edu.mcu.weiranzhu.memegenerator.TextViewPlus
+            android:id="@+id/bottomText"
+            style="@style/shadoweffect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            app:customFont="impact-opentype.otf"
+            app:layout_constraintBottom_toBottomOf="parent"></tw.edu.mcu.weiranzhu.memegenerator.TextViewPlus>
+
+        <tw.edu.mcu.weiranzhu.memegenerator.TextViewPlus
+            android:id="@+id/topText"
+            style="@style/shadoweffect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            app:customFont="impact-opentype.otf"
+            app:layout_constraintTop_toTopOf="@+id/image_view"></tw.edu.mcu.weiranzhu.memegenerator.TextViewPlus>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
